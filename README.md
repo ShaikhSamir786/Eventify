@@ -1,5 +1,4 @@
-# Eventify
-Where Events Meet Innovation
+# 🚀 Eventify — Where Events Meet Innovation!
 
 ## ✨ Key Features
 
