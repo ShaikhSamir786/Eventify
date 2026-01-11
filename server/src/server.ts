@@ -1,6 +1,7 @@
 import express from "express";
 import type { Request } from "express";
 import bodyParser from "body-parser";
+import cors from "cors";
 import jwt from "jsonwebtoken";
 import logger from "./configs/logger.ts";
 import { sequelize } from "./configs/sequelize-postgre.ts";
@@ -14,6 +15,10 @@ import limiter from "./middlewares/limiter.ts";
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+app.use(cors({
+  origin: "http://localhost:3000",
+  credentials: true
+}));
 app.use(express.json());
 app.use(limiter);
 
